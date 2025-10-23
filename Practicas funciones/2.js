@@ -1,15 +1,15 @@
-let words = [];
+const words = [];
 let word = ' ';
+const map = new Map();
 while (word !== ''){
     word = prompt("INTRODUCE TUS PALABRAS:");
     words.push(word);
 }
 console.log(words);
-function getMap (array) {
-    const map = new Map([words]);
-    for(let element of map) {
-        console.log(element);
-    }
-}
-words.getMap();
+let value = map.get(word);
+map.set(word, ++value);
 console.log(map);
+console.log('Frecuencias:')
+for (let [number, value] of map) {
+    console.log (`Nº${number}: ${value}`);
+}
