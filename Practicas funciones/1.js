@@ -10,4 +10,5 @@ function reorder(array) {
     words.reverse();
 }
 reorder(words);
-console.log(words);
+const unique = [...new Set(words)];
+console.log(unique);
