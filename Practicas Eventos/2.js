@@ -12,6 +12,8 @@ email.addEventListener("blur", function errorEmail() {
     if (!email.value.includes('@')) {
         emailError.textContent = ("Email no válido, debe contener un @");
         emailValido = false;
+    } else {
+        emailValido = true;
     }
     activeButton();
 })
@@ -19,6 +21,8 @@ password.addEventListener("blur", function errorPassword() {
     if (password.value.length < 8 || password.value.length > 10) {
         passwordError.textContent = ("Contraseña no válida, debe tener una longitud entre 8 y 10 carácteres");
         passwordValida = false;
+    } else {
+        passwordValida = true;
     }
     activeButton();   
 })
