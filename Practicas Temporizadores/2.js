@@ -1,7 +1,16 @@
-let cont = 0;
+let cont = 100;
 let div = document.createElement ("div");
-if (cont == 120) {
-    setTimeout(()=>div.textContent("¡Máximo alcanzado!"),1000);
-} else if (cont <= 80) {
-    setTimeout(()=>div.textContent("¡Mínimo alcanzado!"),1000);
-}
+div.textContent = "Precio actual: " + cont;
+document.body.appendChild(div);
+let interval = setInterval(() => {
+    let second = Math.floor(Math.random()*11)-5;
+    cont = cont + second;
+    div.textContent = "Precio ahora: " + cont;
+    if (cont >= 120) {
+        div.textContent = "¡Máximo alcanzado!";
+        clearInterval(interval);
+    } else if (cont <= 80) {
+        div.textContent = "¡Mínimo alcanzado!";
+        clearInterval(interval);
+    }
+}, 1000);
