@@ -42,7 +42,7 @@ function hacerCompra() {
             parrafo.textContent = respuesta;
         })
         .catch((error) =>{
-            console.log(error.message);
+            parrafo.textContent = error;
         });
 }
 hacerCompra();
