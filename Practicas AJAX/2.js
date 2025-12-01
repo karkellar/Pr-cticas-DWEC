@@ -50,7 +50,7 @@ button.addEventListener("click", function sendId() {
                 })
                 .then((data) => {
                     let h2 = document.createElement('h2');
-                    h2.textContent = (`TÍTULO: ${lititle}`);
+                    h2.textContent = (`TÍTULO: ${data.title}`);
                     document.body.appendChild(h2);
                 })
                     })
